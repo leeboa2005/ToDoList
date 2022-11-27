@@ -10,7 +10,6 @@ function getTime() {
     const seconds = date.getSeconds();
     clockTitle.innerText =
         `${hours < 10 ? `0${hours}`: hours}:${minutes < 10 ? `0${minutes}`: minutes}`;
-        //:${seconds < 10 ? `0${seconds}`: seconds}
 }
 
 //To do list.js
@@ -41,7 +40,7 @@ function saveToDos() {
 function paintToDo(text) {
     const li = document.createElement("li");
 
-    const check = document.createElement("input"); //스펜 체크표시
+    const check = document.createElement("input"); //체크표시
     check.type = "checkbox";
     const num = toDos.length + 1;
     check.id = "list-" + num;
@@ -54,11 +53,11 @@ function paintToDo(text) {
     li.appendChild(label);
 
 
-    const spanCheck = document.createElement("span"); //TO DO LIST text나열
+    const spanCheck = document.createElement("span"); //ToDo List text나열
     spanCheck.className = "label-box";
     label.appendChild(spanCheck);
 
-    const span = document.createElement("span"); //TO DO LIST text나열
+    const span = document.createElement("span"); //ToDo List text나열
     span.className = "label-text";
     const newId = toDos.length + 1;
     span.innerText = text;
@@ -98,7 +97,7 @@ function loadToDos() {
     };
 };
 
-//bg.js
+// 배경 이미지 부분 
 const body = document.querySelector("body"); 
 const photoNum = 7; //사진 개수;
 
@@ -113,7 +112,7 @@ function callPho() {
     body.style.backgroundImage = `url(${url})`; 
 }
 
-// common
+// 공통 부분 
 function todolistInit() {
     getTime();
     setInterval(getTime, 1000);
