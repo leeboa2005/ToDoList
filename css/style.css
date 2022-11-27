@@ -1,0 +1,111 @@
+/* font */
+@font-face {
+    font-family: 'Cafe24Oneprettynight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+ /* common */
+.clearfix::before , 
+.clearfix::after{ 
+    content: "";
+    display: block;
+    clear: both
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    position: relative;
+}
+ /* clock , write  */
+.script_desc1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.script_desc1 h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 11.5vw;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+}
+
+.js-toDoForm {
+    width: 100%;
+}
+
+.js-toDoForm input {
+    width: 100%;
+    border: none;
+    border-bottom: 3px solid #fff;
+    background: transparent;
+    padding: 0.6vw 0;
+}
+
+.js-toDoForm input,
+.js-toDoForm input::placeholder {
+    color: #fff;
+    font-size:18px;
+}
+
+.js-toDoForm input:focus{
+    outline: none;
+}
+
+
+
+ /* ToDoList  */
+.js-toDoList {
+    width: 100%;
+    margin-top:10px;
+    background: #f9f9f9;
+}
+
+.js-toDoList li.list-item{
+    padding:14px 0; 
+    border-bottom: 1px solid #ddd;
+}
+
+.js-toDoList input{
+ margin:0 15px;
+}
+
+.js-toDoList label{
+    padding: 14px 15px;
+    border-left: 1px solid #D1E2FF;
+}
+
+.js-toDoList input:checked + label span.label-text{
+    text-decoration: line-through;}
+
+.js-toDoList label span.label-text{
+    font-size:21px;
+    font-family: 'Cafe24Oneprettynight';
+}
+
+.js-toDoList button
+{
+   float: right;
+  margin-right: 15px;
+}
+
+/* Media Query */
+@media only screen and (max-width:1224px){
+    .script_desc1 h1{font-size:19vw;}
+    .script_desc1 {
+        width:80%;
+    }
+}
+ @media only screen and (max-width:724px){
+        .script_desc1 {
+         width:87%;
+        }
+
+}
